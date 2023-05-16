@@ -1,0 +1,34 @@
+.text-center {
+    margin-top: 5px;
+    /* set display to flex */
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    /* set display to flex */
+}
+
+.card {
+    flex: 1;
+    /* make cards take up equal space */
+    margin-right: 10px;
+    /* add margin to create space between cards */
+}
+
+.card img {
+    height: 400px;
+}
+
+.highlight {
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.text-center {
+    font-size: 36px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: bold;
+}

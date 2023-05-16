@@ -1,0 +1,17 @@
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="/submit" method="POST" (submit)="onSubmit()">
+        <label for="name"><span>Name:</span></label>
+        <input type="text" id="name" name="name" [(ngModel)]="name" required>
+
+        <label for="email"><span>Email:</span></label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" required>
+
+        <label for="message"><span>Message:</span></label>
+        <textarea id="message" name="message" [(ngModel)]="message" required></textarea>
+
+        <input type="submit" value="Send">
+    </form>
+    <p>You can also reach us by phone at <a href="tel:123-456-7890">(123) 456-7890</a>.</p>
+
+</section>

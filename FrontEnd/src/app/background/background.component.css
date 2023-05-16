@@ -1,0 +1,9 @@
+header {
+    position: relative;
+    height: 80vh;
+    min-height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../../assets/images/Erasmus-hp-banner-web.jpg);
+}

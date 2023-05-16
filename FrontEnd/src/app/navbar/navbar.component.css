@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('../../assets/fonts/NevisBold-KGwl.ttf') format('woff2'),
+}
+
+.navbar {
+    background-color: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 23px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* ensure full width */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 0;
+    /* remove margin */
+    justify-content: flex-start;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(0, 0, 0);
+    font-family: "Open Sans", "Arial", sans-serif;
+    /* use different font */
+    font-size: 20px;
+    /* make the font size bigger */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #205295;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 100px;
+    /* adjust to match the height of your logo */
+}
+
+.navbar {
+    margin-top: 20px;
+    /* adjust to match the height of your logo */
+}
+
+.container-fluid.py-4.mb-0 {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #004494;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.container-fluid h1 {
+    text-align: left;
+    font-size: 48px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+.container-fluid p {
+    text-align: left;
+    font-size: 24px;
+    font-family: "Open Sans", "Arial", sans-serif;
+}
