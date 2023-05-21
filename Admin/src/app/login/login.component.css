@@ -1,3 +1,4 @@
+/* login.component.css */
 .login-container {
     display: flex;
     flex-direction: column;
@@ -6,13 +7,11 @@
     height: 100vh;
     background-color: #f1f1f1;
     font-family: Arial, sans-serif;
-    /* Change the font family */
 }
 
 h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    /* Increase the font size */
 }
 
 .form-group {
@@ -23,32 +22,42 @@ label {
     display: block;
     font-weight: bold;
     font-size: 16px;
-    /* Increase the font size */
 }
 
 input[type="text"],
 input[type="password"] {
     width: 400px;
-    /* Increase the width */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    /* Increase the font size */
 }
 
 button {
-    padding: 12px 24px;
-    /* Increase the padding */
-    background-color: #007bff;
+    padding: 12px 0;
+    background-color: #dd0031;
+    background-image: linear-gradient(to bottom, #dd0031, #c8002a);
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    /* Increase the font size */
+    width: 400px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #c8002a;
+}
+
+
+.button-group {
+    margin-top: 20px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-group button {
+    width: 100%;
 }

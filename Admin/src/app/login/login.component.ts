@@ -16,6 +16,7 @@ export class LoginComponent {
   submitForm() {
     // Logic for handling login form submission
     // You can implement your own authentication logic here
+    this.router.navigate(['/dashboard']);
     console.log('Submitted');
   }
 
