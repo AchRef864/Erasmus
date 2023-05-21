@@ -1,34 +1,90 @@
-.text-center {
-    margin-top: 5px;
-    /* set display to flex */
-}
-
 .container {
-    margin-top: 50px;
-    display: flex;
-    /* set display to flex */
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  background-color: #fff;
 }
 
-.card {
-    flex: 1;
-    /* make cards take up equal space */
-    margin-right: 10px;
-    /* add margin to create space between cards */
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  align-self: center;
+  justify-self: center;
 }
 
-.card img {
-    height: 400px;
+.section-title {
+  font-size: 3.5em;
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+  margin: 5vh;
+  padding-bottom: 3vh;
+  border-bottom: 1vh solid #205295;
 }
 
-.highlight {
-    text-align: center;
-    text-decoration: underline;
-    margin-top: 20px;
-    font-size: 24px;
+.section-title:hover {
+  cursor: pointer;
 }
 
-.text-center {
-    font-size: 36px;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
+.mission-art {
+  display: flex;
+  margin: 5vh 0 5vh 0;
+}
+
+.mission-art img {
+  height: 40vh;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.text-container {
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.text-container h2 {
+  font-size: 2.5em;
+  padding: 1vw;
+  margin: 2vh 0 2vh 0;
+  color: rgb(88, 88, 88);
+  border-left: 1vh solid #8bbbfa;
+}
+.text-container span {
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: rgb(88, 88, 88);
+}
+
+.section-card {
+  padding: 5vh;
+  margin: 5vh 0 5vh 0;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 40%;
+  border: 0.5vh solid transparent;
+}
+.section-card:hover {
+  border: 0.5vh solid #205295;
+  background-color: #c3ddff5a;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.section-card h3 {
+  font-size: 2em;
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+}
+.section-card span {
+  color: rgb(88, 88, 88);
+  font-size: 1.2em;
 }

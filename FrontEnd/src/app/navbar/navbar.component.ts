@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-
+  topBarHidden = false;
+  scrollTimeout: any;
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.scrollTimeout = setTimeout(() => {
+      this.topBarHidden = window.pageYOffset > 100;
+    }, 200);
   }
+  constructor() {}
 
+  ngOnInit(): void {}
 }

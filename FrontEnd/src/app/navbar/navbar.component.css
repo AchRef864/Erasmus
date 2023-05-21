@@ -1,74 +1,120 @@
-@font-face {
-    font-family: 'MyFont';
-    src: url('../../assets/fonts/NevisBold-KGwl.ttf') format('woff2'),
+* {
+  scroll-behavior: smooth;
+}
+nav {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+  text-decoration: none;
+  font-size: 14px;
+  height: 10vh;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
-.navbar {
-    background-color: #f3f3f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 23px;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 20px;
+.nav-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1020;
 }
 
-.navbar-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    /* ensure full width */
+nav > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  width: 80%;
 }
 
-.navbar-nav .nav-item {
-    margin-right: 0;
-    /* remove margin */
-    justify-content: flex-start;
+.nav-link {
+  margin-right: 0;
+  padding: 0.5em;
+  justify-content: flex-start;
+  transition: 0.1s ease;
+}
+.nav-link:hover {
+  border-bottom: 3px solid #205295;
+}
+.nav-link-active {
+  border-bottom: 3px solid #205295;
 }
 
 .navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
-    font-family: "Open Sans", "Arial", sans-serif;
-    /* use different font */
-    font-size: 20px;
-    /* make the font size bigger */
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .dropdown-menu .dropdown-item {
-    color: #205295;
+  color: white;
 }
 
 .logo-container {
-    display: flex;
-    justify-content: left;
-    align-items: left;
-    height: 100px;
-    /* adjust to match the height of your logo */
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 100px;
+  padding-left: 8vw;
+  border: 1px solid black;
 }
 
-.navbar {
-    margin-top: 20px;
-    /* adjust to match the height of your logo */
+.logo-container a img {
+  height: 55px;
+  margin: 10px;
+  width: auto;
 }
 
 .container-fluid.py-4.mb-0 {
-    display: flex;
-    justify-content: flex-start;
-    background-color: #004494;
-    color: #FFFFFF;
-    text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #004494;
+  color: #ffffff;
+  text-align: left;
 }
 
 .container-fluid h1 {
-    text-align: left;
-    font-size: 48px;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: bold;
+  text-align: left;
+  font-size: 2.5em;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-weight: bold;
+  margin-bottom: 2vh;
 }
 
 .container-fluid p {
-    text-align: left;
-    font-size: 24px;
-    font-family: "Open Sans", "Arial", sans-serif;
+  text-align: left;
+  font-size: 1.5rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+.dropdown-menu {
+  width: 20vw;
+  background-color: #205295;
+  margin-top: 2vh;
+  border-radius: 0 !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.dropdown-menu li {
+  font-size: 20px;
+  color: white;
+}
+.dropdown-menu li a {
+  padding: 2vh 0 2vh 0;
+  margin: 2vh;
+  width: 90%;
+  border-bottom: 3px solid transparent;
+}
+
+.dropdown-menu li a:hover {
+  border-bottom: 3px solid white;
+  background-color: #205295;
+}
+
+.router-outlet-sticky {
+  margin-top: 5vh;
+  scroll-snap-align: start;
 }

@@ -1,50 +1,14 @@
-<div class="container my-5 py-5">
-    <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
-            <h2 class="mb-4 font-weight-bold">First Title</h2>
-            <p class="mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at eros ligula.
-                Maecenas finibus eget purus sed vestibulum. Praesent id faucibus ante. Fusce a velit at enim porttitor
-                molestie. Ut sodales metus nisi, sed luctus tellus rhoncus ut. Suspendisse vel nunc malesuada, vehicula
-                nunc a, euismod nibh. Fusce faucibus turpis justo, vel fringilla tellus tincidunt nec.</p>
+<div class="container">
+  <section class="mission-section">
+    <div class="art-div">
+      <article *ngFor="let tp of touristicPlaces; let isOdd = odd" class="art">
+        <img [src]="tp.imageUrl" alt="" *ngIf="!isOdd" />
+        <div class="text-container">
+          <h2>{{ tp.title }}</h2>
+          <span>{{ tp.desc }}</span>
         </div>
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/600" alt="First Image" style="max-width: 100%;">
-        </div>
+        <img [src]="tp.imageUrl" alt="" *ngIf="isOdd" />
+      </article>
     </div>
-    <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/600" alt="Second Image" style="max-width: 100%;">
-        </div>
-        <div class="col-md-6">
-            <h2 class="mb-4 font-weight-bold">Second Title</h2>
-            <p class="mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at eros ligula.
-                Maecenas finibus eget purus sed vestibulum. Praesent id faucibus ante. Fusce a velit at enim porttitor
-                molestie. Ut sodales metus nisi, sed luctus tellus rhoncus ut. Suspendisse vel nunc malesuada, vehicula
-                nunc a, euismod nibh. Fusce faucibus turpis justo, vel fringilla tellus tincidunt nec.</p>
-        </div>
-    </div>
-    <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
-            <h2 class="mb-4 font-weight-bold">First Title</h2>
-            <p class="mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at eros ligula.
-                Maecenas finibus eget purus sed vestibulum. Praesent id faucibus ante. Fusce a velit at enim porttitor
-                molestie. Ut sodales metus nisi, sed luctus tellus rhoncus ut. Suspendisse vel nunc malesuada, vehicula
-                nunc a, euismod nibh. Fusce faucibus turpis justo, vel fringilla tellus tincidunt nec.</p>
-        </div>
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/600" alt="First Image" style="max-width: 100%;">
-        </div>
-    </div>
-    <div class="row align-items-center justify-content-center">
-        <div class="col-md-6">
-            <img src="https://via.placeholder.com/600" alt="Second Image" style="max-width: 100%;">
-        </div>
-        <div class="col-md-6">
-            <h2 class="mb-4 font-weight-bold">Second Title</h2>
-            <p class="mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at eros ligula.
-                Maecenas finibus eget purus sed vestibulum. Praesent id faucibus ante. Fusce a velit at enim porttitor
-                molestie. Ut sodales metus nisi, sed luctus tellus rhoncus ut. Suspendisse vel nunc malesuada, vehicula
-                nunc a, euismod nibh. Fusce faucibus turpis justo, vel fringilla tellus tincidunt nec.</p>
-        </div>
-    </div>
+  </section>
 </div>
