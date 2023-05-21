@@ -19,6 +19,10 @@ import { Ka1Component } from './ka1/ka1.component';
 import { CbheComponent } from './cbhe/cbhe.component';
 import { AnnonceComponent } from './annonce/annonce.component';
 import { UpcomingComponent } from './upcoming/upcoming.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -43,7 +47,10 @@ import { UpcomingComponent } from './upcoming/upcoming.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
