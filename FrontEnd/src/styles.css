@@ -43,3 +43,7 @@ body {
 * {
   animation: fadeIn 0.1s ease-in;
 }
+
+* {
+  scroll-behavior: smooth;
+}

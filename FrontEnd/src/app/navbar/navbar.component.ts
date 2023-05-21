@@ -11,8 +11,8 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     this.scrollTimeout = setTimeout(() => {
-      this.topBarHidden = window.pageYOffset > 100;
-    }, 200);
+      this.topBarHidden = window.pageYOffset > 250;
+    }, 100);
   }
   constructor() {}
 

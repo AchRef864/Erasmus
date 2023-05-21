@@ -115,6 +115,5 @@ nav > ul {
 }
 
 .router-outlet-sticky {
-  margin-top: 5vh;
-  scroll-snap-align: start;
+  margin-top: 20vh;
 }
