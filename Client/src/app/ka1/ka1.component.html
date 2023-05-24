@@ -1,1 +1,8 @@
-<p>ka1 works!</p>
+<div>
+    <div class="card-container">
+        <div *ngFor="let item of items" class="card">
+            <h2>welcome to {{ item.title }}</h2>
+            <p>what is it about ? {{ item.content }}</p>
+        </div>
+    </div>
+</div>

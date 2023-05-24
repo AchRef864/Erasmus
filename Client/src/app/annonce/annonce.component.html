@@ -1,1 +1,11 @@
-<p>annonce works!</p>
+<div>
+    <div class="card-container">
+        <div *ngFor="let ann of annonces" class="card">
+            <h2>{{ ann.title }}</h2>
+            <p>what is it about? {{ ann.content }}</p>
+            <p>release date {{ ann.release_date }}</p>
+        </div>
+    </div>
+
+
+</div>

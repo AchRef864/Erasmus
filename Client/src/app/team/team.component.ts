@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-team',
@@ -6,37 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css'],
 })
 export class TeamComponent implements OnInit {
-  persons = [
-    {
-      name: 'John Doe',
-      imgUrl: 'https://via.placeholder.com/150',
-      socialMedia: {
-        twitter: 'https://twitter.com/johndoe',
-        instagram: 'https://instagram.com/johndoe',
-        facebook: 'https://facebook.com/johndoe',
-      },
-    },
-    {
-      name: 'Jane Doe',
-      imgUrl: 'https://via.placeholder.com/150',
-      socialMedia: {
-        twitter: 'https://twitter.com/johndoe',
-        instagram: 'https://instagram.com/johndoe',
-        facebook: 'https://facebook.com/johndoe',
-      },
-    },
-    {
-      name: 'Tom Wilson',
-      imgUrl: 'https://via.placeholder.com/150',
-      socialMedia: {
-        twitter: 'https://twitter.com/johndoe',
-        instagram: 'https://instagram.com/johndoe',
-        facebook: 'https://facebook.com/johndoe',
-      },
-    },
-  ];
+  items: any[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getItems();
+  }
+
+  getItems(): void {
+    this.http.get<any[]>('http://127.0.0.1:5000/staff').subscribe(items => {
+      this.items = items;
+    });
+  }
 }

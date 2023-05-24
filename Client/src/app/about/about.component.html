@@ -3,18 +3,13 @@
     <H1 class="section-title">Our Mission</H1>
     <div class="mission-art-div">
       <article class="mission-art">
-        <img
-          src="../../assets/images/tdt_13062022_erasmus_tipps-und-hilfen.jpg"
-          alt=""
-        />
+        <img src="../../assets/images/tdt_13062022_erasmus_tipps-und-hilfen.jpg" alt="" />
 
         <div class="text-container">
           <h2>Who Are We?</h2>
-          <span
-            >Erasmus+, or Erasmus Plus, is the new programme combining all the
+          <span>Erasmus+, or Erasmus Plus, is the new programme combining all the
             EU's current schemes for education, training, youth and sport, which
-            was started in January 2014.</span
-          >
+            was started in January 2014.</span>
         </div>
       </article>
       <article class="mission-art">
@@ -23,8 +18,7 @@
           <span>
             Promote learning mobility of sport staff, as well as cooperation,
             quality, inclusion, creativity and innovation at the level of sport
-            organisations and sport policies.</span
-          >
+            organisations and sport policies.</span>
         </div>
         <img src="../../assets/images/thumb-student-charter.png" alt="" />
       </article>
@@ -32,25 +26,16 @@
   </section>
   <section class="projects-section">
     <H1 class="section-title">Latest Projects</H1>
-    <div class="section-card">
-      <h3 class="card-title">BLA</h3>
-      <span class="card-content"
-        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ipsum
-        quam ea placeat et quas ullam ratione laboriosam vero rem! Pariatur
-        illum dicta, porro alias cupiditate nulla ut. Iure, deserunt!</span
-      >
+    <div class="section-card" *ngFor="let project of projects">
+      <h3 class="card-title">{{project.title}}</h3>
+      <span class="card-content">{{project.content}}</span>
     </div>
   </section>
   <section class="projects-section">
     <H1 class="section-title">Latest Events</H1>
-    <div class="section-card">
-      <h3 class="card-title">BLA</h3>
-      <span class="card-content"
-        >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores ipsum
-        quam ea placeat et quas ullam ratione laboriosam vero rem! Pariatur
-        illum dicta, porro alias cupiditate nulla ut. Iure, deserunt!</span
-      >
+    <div class="section-card" *ngFor="let event of events">
+      <h3 class="card-title">{{event.title}}</h3>
+      <span class="card-content">{{event.info}}</span>
     </div>
   </section>
 </div>
-s
